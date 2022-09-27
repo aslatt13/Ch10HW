@@ -43,11 +43,11 @@ def display_pay(employee, transactions):
     print('Department:', ec.Employee.get_dept(employee))
     print('Job Title:', ec.Employee.get_job(employee))
     print('Gross Pay:', '${:0,.2f}'.format(ec.Employee.get_salary(employee)), sep = ' ')
-
+    
     #display employee transactions
     i = 0
     total = 0.0
-    for row in transactions:
+    for i in transactions:
         if transactions[i].get_emp_ID() == employee.get_ID():
             transaction = transactions[i].get_desc()
             date = transactions[i].get_date()

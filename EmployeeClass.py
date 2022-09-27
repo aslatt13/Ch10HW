@@ -16,12 +16,16 @@ class Employee:
     #individual attributes
     def get_ID(self):
         return self.__ID
+
     def get_name(self):
         return self.__name
+
     def get_dept(self):
         return self.__dept
+
     def get_job(self):
         return self.__job
+        
     def get_salary(self):
         return self.__salary
 
