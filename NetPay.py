@@ -36,7 +36,7 @@ def enter_transactions():
 
 def display_pay(employee, transactions):
    
-    #display employee Info
+    #display employee info
     print('\n*** Employee Pay ***')
     print('Name:', ec.Employee.get_name(employee).title())
     print('ID:', ec.Employee.get_ID(employee))
