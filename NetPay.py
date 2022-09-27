@@ -57,13 +57,13 @@ def display_pay(employee, transactions):
             print('Date:', date)
             print('Charge: $', format(charge, '<5,.2f'), sep = '')
             print()
-            total += charge
+            total - charge
             i += 1
 
     #display net pay    
     print('Net Pay:', '${:0,.2f}'.format(total, '<5,.2f'), sep = ' ')
 
-
+#for loop through table 2, hardcode
 
 
 main() 
