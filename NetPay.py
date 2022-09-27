@@ -1,5 +1,6 @@
 #Write a program that will create the following employees (Table 1) as well as the payroll deductions (Table 2):
 
+from sqlite3 import paramstyle
 import EmployeeClass as ec
 import PayrollDeductionClass as pdc
 
@@ -46,7 +47,7 @@ def display_pay(employee, transactions):
 
     #display employee transactions
     i = 0
-    pay = 6800
+    pay = 0
     for row in transactions:
         if transactions[i].get_emp_ID() == employee.get_ID():
             transaction = transactions[i].get_desc()
@@ -57,8 +58,9 @@ def display_pay(employee, transactions):
             print('Date:', date)
             print('Charge: $', format(charge, '<5,.2f'), sep = '')
             print()
-            pay - charge
+            pay += (6800 - charge)
             i += 1
+
 
     #display net pay    
     print('Net Pay:', '${:0,.2f}'.format(pay, '<5,.2f'), sep = ' ')
