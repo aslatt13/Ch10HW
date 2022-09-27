@@ -29,7 +29,7 @@ def enter_transactions():
     transaction4 = pdc.Transaction('Vending Machine', '8/22/2022', 3.00, 58475)
     transaction5 = pdc.Transaction('Vending Machine', '8/5/2022', 2.75, 58475)
 
-    transactions = transaction1, transaction2, transaction3, transaction4, transaction5
+    transactions = [transaction1, transaction2, transaction3, transaction4, transaction5]
 
     return transactions
 
@@ -46,7 +46,7 @@ def display_pay(employee, transactions):
 
     #display employee transactions
     i = 0
-    total = 6800
+    pay = 6800
     for row in transactions:
         if transactions[i].get_emp_ID() == employee.get_ID():
             transaction = transactions[i].get_desc()
@@ -57,11 +57,11 @@ def display_pay(employee, transactions):
             print('Date:', date)
             print('Charge: $', format(charge, '<5,.2f'), sep = '')
             print()
-            total - charge
+            pay - charge
             i += 1
 
     #display net pay    
-    print('Net Pay:', '${:0,.2f}'.format(total, '<5,.2f'), sep = ' ')
+    print('Net Pay:', '${:0,.2f}'.format(pay, '<5,.2f'), sep = ' ')
 
 #for loop through table 2, hardcode
 
