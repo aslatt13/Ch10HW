@@ -4,22 +4,22 @@
 # attribute. All attribute should be hidden.
 
 class Transaction:
-    def __init__(self, desc, date, charge, eID):
-        self.__trans_desc = desc
-        self.__trans_date = date
+    def __init__(self, desc, date, charge, id):
+        self.__desc = desc
+        self.__date = date
         self.__charge = charge
-        self.__emp_ID = eID
+        self.__id = id
 
     def get_desc(self):
-        return self.__trans_desc
+        return self.__desc
 
     def get_date(self):
-        return self.__trans_date
+        return self.__date
 
     def get_charge(self):
         return self.__charge
 
-    def get_emp_ID(self):
-        return self.__emp_ID
+    def get_id(self):
+        return self.__id
 
         

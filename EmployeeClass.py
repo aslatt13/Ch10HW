@@ -5,28 +5,27 @@
 
 class Employee:
     #initialize class
-    def __init__(self, ID, name, dept, job, salary):
-        self.__ID = ID
+    def __init__(self, name, id, dept, job, salary):
         self.__name = name
+        self.__id = id
         self.__dept = dept
         self.__job = job
         self.__salary = salary
     
-
     #individual attributes
-    def get_ID(self):
-        return self.__ID
-
-    def get_name(self):
+    def emp_name(self):
         return self.__name
+        
+    def emp_id(self):
+        return self.__id
 
-    def get_dept(self):
+    def emp_dept(self):
         return self.__dept
 
-    def get_job(self):
+    def emp_job(self):
         return self.__job
         
-    def get_salary(self):
+    def emp_salary(self):
         return self.__salary
 
         
