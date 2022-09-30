@@ -25,8 +25,7 @@ def main():
     print('Job Title:', ec.Employee.emp_job(employee))
     print('Gross Pay:', '${:0,.2f}'.format(ec.Employee.emp_salary(employee)), sep = ' ')
 
-    #display employee transactions
-    
+    #filter transactions
     deduction = 0
     for record in transactions:
         if record.get_id() == employee.emp_id():
